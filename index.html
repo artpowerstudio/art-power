@@ -1,64 +1,212 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Art Power — custom printing, wall art, wallpaper, canvas prints and signage in Dubai.">
-<title>Art Power | Printing · Wall Art · Design</title>
-<style>
-:root{--ink:#101820;--gold:#d9a62e;--muted:#65707a;--cream:#f7f6f2;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55}
-a{color:inherit;text-decoration:none}.topbar{background:#101820;color:#fff;font-size:12px;padding:9px 5%;display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap}
-nav{padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:24px;background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 14px #0000000c}
-.logo{font-size:25px;font-weight:900;letter-spacing:.5px}.logo span{color:var(--gold)}.tagline{font-size:10px;letter-spacing:2px;color:var(--muted);display:block}
-.links{display:flex;align-items:center;gap:26px;font-size:14px}.links a:hover{color:#b98312}.btn{display:inline-block;padding:12px 20px;border-radius:28px;background:var(--gold);color:#151515;font-weight:700;border:0;cursor:pointer}.btn.outline{background:transparent;border:1px solid #fff;color:#fff}
-.hero{min-height:470px;display:flex;align-items:center;color:#fff;padding:65px 7%;background:linear-gradient(90deg,#101820f5 0%,#101820d9 42%,#10182020 100%),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85') center/cover}
-.hero-content{max-width:620px}.eyebrow{color:var(--gold);font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(36px,5vw,62px);line-height:1.03;margin:15px 0}.hero p{max-width:520px;color:#eef0f2}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-section{padding:68px 5%}.section-head{max-width:500px}.section-head h2{font-size:clamp(28px,3.5vw,40px);line-height:1.1;margin:8px 0 14px}.section-head p{color:var(--muted)}
-.services{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:30px}.service{border:1px solid #e2e5e7;border-radius:9px;overflow:hidden;background:#fff}.service img{width:100%;height:150px;object-fit:cover;display:block}.service div{padding:16px}.service h3{font-size:16px;margin:0 0 8px}.service p{font-size:13px;color:var(--muted);margin:0}
-.gallery-section{background:var(--cream)}.gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px}.gallery img{width:100%;height:190px;object-fit:cover;border-radius:7px}
-.benefits{background:#101820;color:#fff}.benefit-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:28px}.benefit{border-left:1px solid #ffffff2b;padding-left:18px}.benefit strong{color:var(--gold);display:block;margin-bottom:5px}.benefit p{font-size:13px;color:#c6cbd0;margin:0}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:36px}.contact-card{background:var(--cream);padding:26px;border-radius:12px}.contact-card p{margin:9px 0;color:var(--muted)}.contact-card input,.contact-card textarea{width:100%;padding:13px;border:1px solid #d6dadd;border-radius:6px;margin:7px 0 12px;font:inherit}.contact-card textarea{min-height:100px;resize:vertical}
-footer{background:#0b1117;color:#fff;padding:35px 5% 18px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}.footer-grid p,.footer-grid a{color:#c6cbd0;font-size:13px}.footer-grid a{display:block;margin:7px 0}.copyright{border-top:1px solid #ffffff22;margin-top:25px;padding-top:15px;color:#aab0b5;font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-@media(max-width:950px){.services{grid-template-columns:repeat(3,1fr)}.gallery{grid-template-columns:repeat(3,1fr)}.benefit-grid{grid-template-columns:repeat(3,1fr)}.links{gap:14px}}
-@media(max-width:650px){.topbar{justify-content:center;text-align:center}nav{flex-wrap:wrap;padding:13px 5%}.links{order:3;width:100%;overflow:auto;justify-content:flex-start;padding:5px 0}.links a{white-space:nowrap}.nav-cta{font-size:12px;padding:10px 13px}.hero{min-height:520px;padding:50px 6%;background-position:60% center}.services{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.gallery img{height:150px}.benefit-grid{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.service img{height:125px}section{padding:48px 5%}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Art Power — custom printing, wall art, acrylic prints, canvas and signage.">
+  <title>Art Power | Custom Printing & Wall Art</title>
+  <style>
+    :root{--ink:#17202a;--muted:#5b6570;--accent:#c66b42;--cream:#f7f3ee;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream)}
+    a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+    header{display:flex;align-items:center;justify-content:space-between;padding:22px 0;gap:20px}
+    .logo{font-weight:900;font-size:1.5rem;letter-spacing:1px}.logo span{color:var(--accent)}
+    nav{display:flex;gap:22px;align-items:center}nav a{text-decoration:none;font-size:.95rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:var(--accent);color:white;padding:13px 20px;border-radius:999px;font-weight:700;border:0}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center;padding:46px 0 70px}
+    .eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-size:.78rem;font-weight:800}
+    h1{font-size:clamp(2.7rem,6vw,5.2rem);line-height:.98;margin:15px 0 20px;letter-spacing:-2px}
+    .hero p{font-size:1.12rem;color:var(--muted);line-height:1.7;max-width:540px}
+    .art-panel{min-height:390px;border-radius:28px;position:relative;overflow:hidden;background:linear-gradient(140deg,#d8b6a0,#f1dfc9 42%,#536a66);display:flex;align-items:center;justify-content:center}
+    .art-panel:before{content:"";position:absolute;width:64%;height:72%;background:linear-gradient(145deg,#edc6a4,#ba6545 50%,#243d3b);transform:rotate(-8deg);box-shadow:0 25px 60px #17202a44;border:12px solid #f7f1e8}
+    .art-panel:after{content:"ART THAT MAKES A SPACE";position:absolute;bottom:25px;left:25px;color:white;font-size:.78rem;letter-spacing:2px;font-weight:800}
+    section{padding:54px 0}h2{font-size:clamp(2rem,4vw,3rem);margin:0 0 12px;letter-spacing:-1px}.intro{color:var(--muted);line-height:1.7;max-width:650px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .service{background:var(--white);padding:25px;border-radius:18px;min-height:170px;border:1px solid #e8e0d7}
+    .service .num{font-size:.8rem;color:var(--accent);font-weight:800;letter-spacing:1px}.service h3{margin:15px 0 8px}.service p{color:var(--muted);line-height:1.6;margin:0}
+    .contact{background:#1d2928;color:white;border-radius:28px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .contact p{color:#d7dfdc;line-height:1.7}.contact .btn{background:#229d60;white-space:nowrap}
+    footer{padding:28px 0;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+
+    .gallery-section{padding-top:25px}
+    .gallery-categories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .gallery-card{padding:0;overflow:hidden;text-align:left;border:1px solid #e8e0d7;border-radius:18px;background:#fff;cursor:pointer;color:var(--ink);transition:transform .18s,box-shadow .18s}
+    .gallery-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px #17202a18}
+    .gallery-card img{display:block;width:100%;height:210px;object-fit:cover}
+    .gallery-card-copy{padding:18px}
+    .gallery-card h3{margin:0 0 7px}
+    .gallery-card p{margin:0;color:var(--muted);line-height:1.5}
+    .gallery-count{display:inline-block;margin-top:12px;color:var(--accent);font-weight:800;font-size:.88rem}
+    .gallery-modal{position:fixed;inset:0;background:#101716eF;z-index:1000;display:none;overflow:auto;padding:24px}
+    .gallery-modal.open{display:block}
+    .gallery-modal-inner{max-width:1120px;margin:0 auto;background:var(--cream);border-radius:22px;padding:24px}
+    .gallery-modal-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .gallery-modal-top h2{font-size:clamp(1.6rem,4vw,2.5rem);margin:0}
+    .gallery-close{border:0;border-radius:999px;padding:12px 17px;font-size:1rem;font-weight:800;background:#1d2928;color:white;cursor:pointer}
+    .gallery-images{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .gallery-images button{border:0;padding:0;background:#fff;border-radius:12px;overflow:hidden;cursor:pointer}
+    .gallery-images img{display:block;width:100%;height:170px;object-fit:cover;transition:transform .2s}
+    .gallery-images button:hover img{transform:scale(1.04)}
+    .gallery-lightbox{position:fixed;inset:0;z-index:1100;background:#080b0bf2;display:none;align-items:center;justify-content:center;padding:20px}
+    .gallery-lightbox.open{display:flex}
+    .gallery-lightbox img{max-width:92vw;max-height:82vh;object-fit:contain;border-radius:8px}
+    .lightbox-close{position:absolute;top:18px;right:20px}
+    .gallery-hint{color:var(--muted);font-size:.94rem;margin:0 0 18px}
+    @media(max-width:760px){.gallery-categories{grid-template-columns:1fr}.gallery-card img{height:220px}.gallery-modal{padding:10px}.gallery-modal-inner{padding:15px}.gallery-images{grid-template-columns:repeat(2,1fr);gap:9px}.gallery-images img{height:135px}}
+
+    @media(max-width:760px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:25px}.art-panel{min-height:290px}.services{grid-template-columns:1fr}.contact{display:block;padding:28px}.contact .btn{margin-top:12px}}
+  </style>
 </head>
 <body>
-<div class="topbar"><span>📍 Dubai, UAE</span><span>☎ +971 545734315</span><span>✉ info@artpower.ae</span></div>
-<nav>
-  <a class="brand" href="#home"><span class="logo">A<span>P</span> ART <span>POWER</span></span><span class="tagline">PRINTING · WALL ART · DESIGN</span></a>
-  <div class="links"><a href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About Us</a><a href="#contact">Contact</a></div>
-  <a class="btn nav-cta" href="https://wa.me/971545734315" target="_blank" rel="noopener">Chat on WhatsApp</a>
-</nav>
-<main>
-<section class="hero" id="home"><div class="hero-content"><div class="eyebrow">Turn your ideas into beautiful spaces</div><h1>Custom Prints &amp;<br>Wall Art Solutions</h1><p>Bring your spaces to life with high-quality UV printing, custom wall art, wallpapers, canvas prints and signage for homes, offices and businesses.</p><div class="actions"><a class="btn" href="#services">Explore Our Services →</a><a class="btn outline" href="#gallery">View Gallery</a></div></div></section>
-<section id="services"><div class="section-head"><div class="eyebrow">What we do</div><h2>Our Services</h2><p>Custom printing and art solutions to enhance your space, express your style and help your brand stand out.</p></div>
-<div class="services">
-<article class="service"><img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?auto=format&fit=crop&w=600&q=80" alt="Colorful printing"><div><h3>UV Printing</h3><p>Print on acrylic, glass, metal, wood and more.</p></div></article>
-<article class="service"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Decorative wallpaper"><div><h3>Wallpaper &amp; Vinyl</h3><p>Transform your walls with custom patterns and finishes.</p></div></article>
-<article class="service"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=80" alt="Framed canvas artwork"><div><h3>Canvas Printing</h3><p>High-quality canvas prints for home or office.</p></div></article>
-<article class="service"><img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=600&q=80" alt="Framed wall art"><div><h3>Framing &amp; Artwork</h3><p>Custom framing and ready-to-hang artwork.</p></div></article>
-<article class="service"><img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80" alt="Brand design work"><div><h3>Business Signage</h3><p>Custom signs, logos and branding solutions.</p></div></article>
-</div></section>
-<section class="gallery-section" id="gallery"><div class="section-head"><div class="eyebrow">Our work</div><h2>Ideas Made Visible</h2><p>Explore inspiration for your next home, office or commercial project.</p></div><div class="gallery">
-<img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=600&q=80" alt="Decorative art"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Interior design"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80" alt="Modern office"><img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=600&q=80" alt="Interior decor"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80" alt="Wall art in a living room">
-</div></section>
-<section class="benefits" id="about"><div class="eyebrow">Why choose us</div><h2>Why Choose Art Power?</h2><p style="color:#c6cbd0">Your vision. Our quality. Perfect together.</p><div class="benefit-grid"><div class="benefit"><strong>✦ Premium Quality</strong><p>Sharp prints and durable materials.</p></div><div class="benefit"><strong>◷ Fast Turnaround</strong><p>Timely delivery for your projects.</p></div><div class="benefit"><strong>✧ Custom Designs</strong><p>Made to suit your style and needs.</p></div><div class="benefit"><strong>◇ Great Value</strong><p>Practical solutions for your budget.</p></div><div class="benefit"><strong>⌖ Dubai Based</strong><p>Local service and support.</p></div></div></section>
-<section id="contact"><div class="contact"><div><div class="eyebrow">Let's work together</div><h2>Have a project in mind?</h2><p>Tell us what you need and we’ll help you bring your idea to life. Contact details below are sample placeholders—update them before publishing.</p><p><strong>Phone:</strong> +971 50 763 0087</p><p><strong>Email:</strong> info@artpower.ae</p><p><strong>Location:</strong> Dubai, United Arab Emirates</p><a class="btn" href="https://wa.me/971545734315" target="_blank" rel="noopener">Message us on WhatsApp</a></div>
-<form class="contact-card" id="contactForm"><h3>Request a Quote</h3><label for="name">Your name</label><input id="name" required placeholder="Name"><label for="phone">Phone or WhatsApp</label><input id="phone" required placeholder="+971 ..."><label for="service">What service do you need?</label><input id="service" placeholder="UV printing, wallpaper, canvas..."><label for="message">Project details</label><textarea id="message" placeholder="Tell us a little about your project"></textarea><button class="btn" type="submit">Send enquiry on WhatsApp →</button></form></div></section>
-</main>
-<footer><div class="footer-grid"><div><div class="logo">AP ART <span>POWER</span></div><p>Printing · Wall Art · Design</p><p>Creative print and interior art solutions in Dubai.</p></div><div><strong>Quick Links</strong><a href="#services">Our Services</a><a href="#gallery">Gallery</a><a href="#about">About Us</a><a href="#contact">Contact</a></div><div><strong>Get in Touch</strong><p>Dubai, UAE</p><p>+971 545734315</p><p>info@artpower.ae</p></div></div><div class="copyright"><span>© <span id="year"></span> Art Power. All rights reserved.</span><span>Custom Printing | Wall Art | Dubai</span></div></footer>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="#" aria-label="Art Power home" style="text-decoration:none">ART <span>POWER</span></a>
+      <nav><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <a class="btn" href="https://wa.me/971545734315?text=Hello%20Art%20Power%2C%20I%27d%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener">WhatsApp Us</a>
+    </header>
+
+    <main>
+      <div class="hero" id="about">
+        <div>
+          <div class="eyebrow">Custom printing • Wall art • Creative spaces</div>
+          <h1>Make your<br>ideas <span style="color:var(--accent)">stand out.</span></h1>
+          <p>Bring your ideas to life with custom prints, statement wall art and creative display solutions. Tell us what you have in mind and let’s make something special.</p>
+          <a class="btn" href="https://wa.me/971545734315?text=Hello%20Art%20Power%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">Get a Quote on WhatsApp ↗</a>
+        </div>
+        <div class="art-panel" role="img" aria-label="Abstract modern art panel"></div>
+      </div>
+
+      <section id="services">
+        <div class="eyebrow">What we do</div>
+        <h2>Printing made personal.</h2>
+        <p class="intro">From a single decorative piece to branded displays, Art Power helps turn concepts into visual experiences. Contact us to discuss materials, sizes and custom requirements.</p>
+        <div class="services">
+          <article class="service"><div class="num">01 / WALL ART</div><h3>Canvas & Wall Prints</h3><p>Decorative prints designed to bring personality to homes, offices and commercial spaces.</p></article>
+          <article class="service"><div class="num">02 / CUSTOM MATERIALS</div><h3>Acrylic & UV Printing</h3><p>Explore custom printing options for signs, panels and creative display projects.</p></article>
+          <article class="service"><div class="num">03 / BUSINESS</div><h3>Signage & Displays</h3><p>Visual solutions for shops, events and brands, tailored to your project.</p></article>
+        </div>
+      </section>
+
+
+      <section id="gallery" class="gallery-section">
+        <div class="eyebrow">Our portfolio</div>
+        <h2>Explore the Art Power gallery.</h2>
+        <p class="intro">Choose a collection to explore 20 sample images. Tap any image to view it larger. These are sample inspiration images and can later be replaced with photos of your own work.</p>
+        <div class="gallery-categories">
+          <button class="gallery-card" type="button" data-gallery="wall">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=900&q=80" alt="Framed artwork in a gallery">
+            <div class="gallery-card-copy"><h3>Canvas & Wall Art</h3><p>Decorative art, framed prints and interior inspiration.</p><span class="gallery-count">View 20 pictures ↗</span></div>
+          </button>
+          <button class="gallery-card" type="button" data-gallery="acrylic">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=900&q=80" alt="Colorful contemporary artwork">
+            <div class="gallery-card-copy"><h3>Acrylic & UV Printing</h3><p>Colorful artwork and creative print inspiration.</p><span class="gallery-count">View 20 pictures ↗</span></div>
+          </button>
+          <button class="gallery-card" type="button" data-gallery="signs">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Modern commercial interior">
+            <div class="gallery-card-copy"><h3>Signs & Displays</h3><p>Retail, workspace and branded display inspiration.</p><span class="gallery-count">View 20 pictures ↗</span></div>
+          </button>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="contact">
+          <div><div class="eyebrow" style="color:#e9a17f">Let’s talk</div><h2>Have a project in mind?</h2><p>Message Art Power on WhatsApp to ask a question or request a quote.</p><p><strong>WhatsApp:</strong> +971 54 573 4315</p></div>
+          <a class="btn" href="https://wa.me/971545734315?text=Hello%20Art%20Power%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+        </div>
+      </section>
+    </main>
+
+  <div class="gallery-modal" id="galleryModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
+    <div class="gallery-modal-inner">
+      <div class="gallery-modal-top"><h2 id="galleryModalTitle">Gallery</h2><button class="gallery-close" id="galleryClose" type="button">Close ✕</button></div>
+      <p class="gallery-hint">Select any picture to view it larger.</p>
+      <div class="gallery-images" id="galleryImages"></div>
+    </div>
+  </div>
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="gallery-close lightbox-close" id="lightboxClose" type="button">Close ✕</button>
+    <img id="lightboxImage" src="" alt="Selected gallery image">
+  </div>
+
+    <footer><span>© <span id="year">2026</span> Art Power. All rights reserved.</span><span>Custom printing & creative solutions</span></footer>
+  </div>
+
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('contactForm').addEventListener('submit', function(e){
- e.preventDefault();
- const name=document.getElementById('name').value.trim();
- const phone=document.getElementById('phone').value.trim();
- const service=document.getElementById('service').value.trim();
- const message=document.getElementById('message').value.trim();
- const text=`Hello Art Power! My name is ${name}. My contact: ${phone}. Service: ${service || 'Not specified'}. Project details: ${message || 'Please contact me.'}`;
- window.open('https://wa.me/971545734315?text='+encodeURIComponent(text),'_blank','noopener');
-});
+(function(){
+  const imageIds = [
+    "photo-1579783902614-a3fb3927b6a5","photo-1541961017774-22349e4a1262",
+    "photo-1577083552431-6e5fd01aa342","photo-1578301978693-85fa9c0320b9",
+    "photo-1577083288073-40892c0860a4","photo-1579965342575-16428a7c8881",
+    "photo-1577083552431-6e5fd01aa342","photo-1579783901586-d88db74b4fe4",
+    "photo-1578301978693-85fa9c0320b9","photo-1549490349-8643362247b5",
+    "photo-1577083552431-6e5fd01aa342","photo-1579783902614-a3fb3927b6a5",
+    "photo-1541961017774-22349e4a1262","photo-1579965342575-16428a7c8881",
+    "photo-1578301978693-85fa9c0320b9","photo-1549490349-8643362247b5",
+    "photo-1577083288073-40892c0860a4","photo-1579783901586-d88db74b4fe4",
+    "photo-1577083552431-6e5fd01aa342","photo-1541961017774-22349e4a1262"
+  ];
+  const collections = {
+    wall: {title:"Canvas & Wall Art — 20 Pictures", prefix:"wall-art"},
+    acrylic: {title:"Acrylic & UV Printing — 20 Pictures", prefix:"acrylic-print"},
+    signs: {title:"Signs & Displays — 20 Pictures", prefix:"sign-display"}
+  };
+  const modal = document.getElementById("galleryModal");
+  const grid = document.getElementById("galleryImages");
+  const title = document.getElementById("galleryModalTitle");
+  const lightbox = document.getElementById("galleryLightbox");
+  const largeImage = document.getElementById("lightboxImage");
+  function imgUrl(id, i, width){
+    return "https://images.unsplash.com/" + id + "?auto=format&fit=crop&w=" + width + "&q=80";
+  }
+  document.querySelectorAll("[data-gallery]").forEach(card => {
+    card.addEventListener("click", () => {
+      const key = card.getAttribute("data-gallery");
+      title.textContent = collections[key].title;
+      grid.innerHTML = "";
+      imageIds.forEach((id, i) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.setAttribute("aria-label", "Open sample picture " + (i+1));
+        const img = document.createElement("img");
+        img.loading = "lazy";
+        img.src = imgUrl(id, i, 600);
+        img.alt = collections[key].prefix + " sample " + (i+1);
+        button.appendChild(img);
+        button.addEventListener("click", () => {
+          largeImage.src = imgUrl(id, i, 1600);
+          largeImage.alt = img.alt;
+          lightbox.classList.add("open");
+          lightbox.setAttribute("aria-hidden", "false");
+        });
+        grid.appendChild(button);
+      });
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
+  });
+  function closeGallery(){
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+  document.getElementById("galleryClose").addEventListener("click", closeGallery);
+  modal.addEventListener("click", e => { if(e.target === modal) closeGallery(); });
+  function closeLightbox(){
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+    largeImage.src = "";
+  }
+  document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", e => { if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener("keydown", e => {
+    if(e.key === "Escape"){
+      closeLightbox();
+      closeGallery();
+    }
+  });
+})();
 </script>
-</body></html>
+
+</body>
+</html>
